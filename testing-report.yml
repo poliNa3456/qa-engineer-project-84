@@ -1,0 +1,60 @@
+---
+- summary: |
+    Успешная авторизация пользователя с корректным логином и паролем
+  status: not_executed
+
+- summary: |
+    Попытка авторизации с неверным паролем
+  status: not_executed
+
+- summary: |
+    Попытка авторизации несуществующим пользователем
+  status: not_executed
+
+- summary: |
+    Валидация пустых обязательных полей на странице входа
+  status: not_executed
+
+- summary: |
+    Тест на защиту от инъекций в полях логина и пароля
+  status: not_executed
+
+- summary: |
+    «Запомнить меня» — сохранение сессии после закрытия браузера
+  status: not_executed
+
+- summary: |
+    Выход пользователя (logout)
+  status: not_executed
+
+- summary: |
+    Успешная регистрация нового пользователя
+  status: not_executed
+
+- summary: |
+    Регистрация с уже существующим логином или email
+  status: not_executed
+
+- summary: |
+    Восстановление пароля — запрос сброса
+  status: not_executed
+
+- summary: |
+    Поиск товара по корректному названию — результат отображается
+  status: not_executed
+
+- summary: |
+    Поиск товара по несуществующему запросу — сообщения об отсутствии результатов
+  status: not_executed
+
+- summary: |
+    Добавление товара в корзину и проверка содержимого корзины
+  status: not_executed
+
+- summary: |
+    Удаление товара из корзины
+  status: not_executed
+
+- summary: |
+    Оформление заказа — базовый happy-path (без оплаты внешними методами)
+  status: not_executed
