@@ -1,39 +1,30 @@
 ---
 test-cases:
   - summary: |
-      Вход в приложение с корректным логином и паролем
-    status: not-executed
+      Загрузка главной страницы — страница открывается, все основные ресурсы загружены.
+    status: pass
 
   - summary: |
-      Навигация по категориям: открытие страницы категории, отображение списка товаров
-    status: not-executed
+      В консоли DevTools при загрузке нет ошибок выполнения скриптов.
+    status: fail
 
   - summary: |
-      Просмотр карточки товара: проверки названия, описания, цены и наличия кнопки "Добавить в корзину"
-    status: not-executed
+      Добавление товара в корзину — товар появляется в корзине и счётчик обновляется.
+    status: pass
 
+bugreports:
   - summary: |
-      Добавление товара в корзину и просмотр содержимого корзины
-    status: not-executed
-
-  - summary: |
-      Процесс оформления заказа (заполнение формы, проверка валидации)
-    status: not-executed
-
-  - summary: |
-      Поиск товара по ключевому слову, корректность результатов
-    status: not-executed
-
-  - summary: |
-      Сортировка и фильтрация товаров, проверка пагинации
-    status: not-executed
-
-  - summary: |
-      Проверка локализации/языка интерфейса (если поддерживается)
-    status: not-executed
-
-  - summary: |
-      Базовая проверка адаптивности на мобильном и десктопе
-    status: not-executed
-
-bugreports: []
+      Uncaught TypeError при загрузке главной страницы (ошибка в скрипте отображения баннера)
+    environment: |
+      URL: https://products-store-ru.hexlet.app (вторая версия)
+      Browser: Chrome 120.0.6100.0
+      OS: Windows 10
+      Date: 2025-12-15T14:20:00Z
+    steps-to-reproduce: |
+      1. Открыть главную страницу https://products-store-ru.hexlet.app
+      2. Ожидать загрузки всех ресурсов
+      3. В консоли появится ошибка (см. Console)
+    expected-result: |
+      Главная страница загружается без ошибок в консоли.
+    actual-result: |
+      В консоли появляется Uncaught TypeError: Cannot read property 'map' of undefined, скрипт не отрисовывает баннер
